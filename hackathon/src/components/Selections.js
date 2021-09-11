@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Selections = ({selection}) => {
+const Selections = ({icons, selection}) => {
     return (
-        <div>
-            <button className="btn">{selection}</button>
+        <div className="selections">
+            
+            <button className="btn"><i className={icons}></i> {selection}</button>
         </div>
     )
 }

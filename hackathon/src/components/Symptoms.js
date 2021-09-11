@@ -6,6 +6,7 @@ const Symptoms = ({}) => {
     return (
         <div className="symptoms">
             <h3>What are your symptoms today?</h3>
+            <input className="input" type="text" placeholder="Search"></input>
            <SelectSymptoms></SelectSymptoms>
 
         </div>
