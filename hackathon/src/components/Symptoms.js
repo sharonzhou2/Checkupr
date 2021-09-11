@@ -1,13 +1,12 @@
 import React from 'react'
-import Selections from './Selections'
+import SelectSymptoms from './SelectSymptoms'
+
+
 const Symptoms = ({}) => {
     return (
-        <div className="Selections">
+        <div className="symptoms">
             <h3>What are your symptoms today?</h3>
-            <Selections selection="Heart Burn"></Selections>
-            <Selections selection="Cold"></Selections>
-            <Selections selection="Fracture"></Selections>
-            <Selections selection="Flu"></Selections>
+           <SelectSymptoms></SelectSymptoms>
 
         </div>
     )
