@@ -1,10 +1,11 @@
 import React from 'react'
+import Title from './Title'
 
 const Home = () => {
     return (
-        <div>
-            <h1>Checkupr</h1>
-            <h2>Healthcare for everyone</h2>
+        <div className="home">
+            <Title></Title>
+            <img src="/images/conference.png" alt="Healthcare"></img>
         </div>
     )
 }
