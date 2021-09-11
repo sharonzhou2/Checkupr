@@ -8,6 +8,9 @@ const SelectSymtoms = () => {
             <Selections selection="Cold"></Selections>
             <Selections selection="Fracture"></Selections>
             <Selections selection="Flu"></Selections>
+            {/* <Selections selection="Flu"></Selections> */}
+
+
         </div>
     )
 }
