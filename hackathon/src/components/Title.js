@@ -3,7 +3,7 @@ import Button from './Button'
 
 const Title = () => {
     return (
-        <div>
+        <div className="title">
             <h1>Checkupr</h1>
             <h2>Healthcare for everyone</h2>
             <Button text="Create An Account"></Button>

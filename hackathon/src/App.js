@@ -8,22 +8,14 @@ import {
 } from "react-router-dom";
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
+import Navbar from './components/Navbar';
+
 
 function App() {
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
+     <div>
+       <Navbar></Navbar>
 
         <hr />
 

@@ -2,8 +2,8 @@ import React from 'react'
 
 const Button = ({text}) => {
     return (
-        <div>
-            <Button>{text}</Button>
+        <div >
+            <button className="btn">{text}</button>
         </div>
     )
 }

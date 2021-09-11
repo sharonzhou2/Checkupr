@@ -21,9 +21,53 @@ body {
 
 }
 
+.home Title {
+  
+}
+
 .home img {
   width: 500px;
   height: 500px;
   display: block;
   margin-left: auto;
+}
+
+.navbar ul{
+  /* text-decoration: none; */
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar Link {
+  text-decoration: none !important;
+}
+
+
+
+.btn {
+  padding: 5px;
+  font-size: 15pt;
+  background-color: rgb(221, 221, 221);
+  /* background-color: transparent; */
+  border-radius: 5px;
+  border: none;
+}
+
+.title Button {
+  margin-top: 50px;
+
+}
+
+.dashboard Profile {
+  margin: 30px;
+}
+
+
+.profile {
+  padding: 20px;
+  max-width: 30%;
+  border: 2px solid rgb(241, 239, 239);
+  /* background-color: rgb(246, 246, 246); */
+  border-radius: 10px;
 }
