@@ -6,7 +6,7 @@ const Title = () => {
         <div className="title">
             <h1>Checkupr</h1>
             <h2>Healthcare for everyone</h2>
-            <Button text="Create An Account"></Button>
+            <Button text="Create An Account" onClick={onHandleSignUp}></Button>
         </div>
     )
 }

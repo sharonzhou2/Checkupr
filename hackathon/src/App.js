@@ -9,15 +9,24 @@ import {
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
-
+import Footer from './components/Footer';
 
 function App() {
+
+  data = {
+    patients: {
+     id: 1,
+     name: "",
+    symptoms: "Flu", 
+
+     
+    }
+  }
+
   return (
     <Router>
      <div>
        <Navbar></Navbar>
-
-        <hr />
 
         {/*
           A <Switch> looks through all its children <Route>
@@ -37,6 +46,8 @@ function App() {
             <Dashboard />
           </Route>
         </Switch>
+        <Footer></Footer>
+
       </div>
     </Router>
   );
