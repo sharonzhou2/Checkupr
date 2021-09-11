@@ -13,15 +13,15 @@ import Footer from './components/Footer';
 
 function App() {
 
-  data = {
-    patients: {
-     id: 1,
-     name: "",
-    symptoms: "Flu", 
+  // data = {
+  //   patients: {
+  //    id: 1,
+  //    name: "",
+  //   symptoms: "Flu", 
 
      
-    }
-  }
+  //   }
+  // }
 
   return (
     <Router>
