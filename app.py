@@ -15,67 +15,88 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
-class Articles(db.Model):
+class Patients(db.Model):
+    __tablename__ = 'patients'
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100))
-    body = db.Column(db.Text())
-    date = db.Column(db.DateTime, default=datetime.datetime.now)
-
-    def __init__(self, title, body):
-        self.title = title
-        self.body = body
+    name = db.Column(db.String(100))
+    dob = db.Column(db.DateTime, default=datetime.datetime.now)
+    notes = db.Column(db.Text(), default="")
+    doctor_id = db.Column(db.Integer, db.ForeignKey('doctors.id'))
+    doctor = db.relationship('Doctors', cascade='all,delete-orphan', single_parent=True, backref=db.backref('patients', lazy='joined'))
 
 
-class ArticleSchema(ma.Schema):
+    def __init__(self, name):
+        self.name = name
+
+class Doctors(db.Model):
+    __tablename__ = 'doctors'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100))
+    
+    def __init__(self, name):
+        self.name = name
+
+
+class PatientSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-        fields = ('id', 'title', 'body', 'date')
+        model = Patients
+        include_fk = True
 
-article_schema = ArticleSchema()
-articles_schema = ArticleSchema(many=True)
+class DoctorSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Doctors
+
+
+patient_schema = PatientSchema()
+patients_schema = PatientSchema(many=True)
+
+doctor_schema = DoctorSchema()
 
 # CORS(app) #comment this on deployment
 # api = Api(app)
 
 @app.route("/get", methods = ['GET'])
-def get_articles():
-    all_articles = Articles.query.all()
-    results = articles_schema.dump(all_articles)
+def get_patients():
+    all_patients = Patients.query.all()
+    results = patients_schema.dump(all_patients)
     return jsonify(results)
 
 @app.route("/get/<id>", methods = ['GET'])
 def post_details(id):
-    article = Articles.query.get(id)
-    return article_schema.jsonify(article)
+    patient = Patients.query.get(id)
+    return patient_schema.jsonify(patient)
+
+@app.route("/patients/<id>", methods = ['GET'])
+def doctor_patients(id):
+    patients = Patients.query.filter(Patients.doctor_id == id)
+    results = patients_schema.dump(patients)
+    return jsonify(results)
 
 @app.route("/add", methods = ['POST'])
-def add_article():
-    title = request.json['title']
-    body = request.json['body']
+def add_patient():
+    name = request.json['name']
 
-    articles = Articles(title, body)
-    db.session.add(articles)
+    patient = Patients(name)
+    db.session.add(patient)
     db.session.commit()
-    return article_schema.jsonify(articles)
+    return patient_schema.jsonify(patient)
 
 @app.route("/update/<id>", methods = ['PUT'])
-def update_article(id):
-    article = Articles.query.get(id)
+def update_patient(id):
+    patient = Patients.query.get(id)
 
-    title = request.json['title']
-    body = request.json['body']
+    name = request.json['name']
 
-    article.title = title
-    article.body = body
+    patient.name = name
 
     db.session.commit()
-    return article_schema.jsonify(article)
+    return patient_schema.jsonify(patient)
 
 
-@app.route("/update/delete", methods = ['DELETE'])
+@app.route("/delete/<id>", methods = ['DELETE'])
 def article_delete(id):
-    article = Articles.query.get(id)
-    article = Articles.query.get(id)
-    db.session.delete(article)
+    patient = Patients.query.get(id)
+    db.session.delete(patient)
     db.session.commit()
 
 
