@@ -7,24 +7,26 @@ import {
   Link
 } from "react-router-dom";
 import Home from './components/Home';
+import Dashboard from './components/Dashboard';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
+
+  // data = {
+  //   patients: {
+  //    id: 1,
+  //    name: "",
+  //   symptoms: "Flu", 
+
+     
+  //   }
+  // }
+
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
-
-        <hr />
+     <div>
+       <Navbar></Navbar>
 
         {/*
           A <Switch> looks through all its children <Route>
@@ -41,9 +43,11 @@ function App() {
             {/* <About /> */}
           </Route>
           <Route path="/dashboard">
-            {/* <Dashboard /> */}
+            <Dashboard />
           </Route>
         </Switch>
+        <Footer></Footer>
+
       </div>
     </Router>
   );

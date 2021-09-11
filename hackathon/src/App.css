@@ -1,38 +1,140 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+
+
+
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.home {
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.home h1 {
+  font-size: 50pt;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home h2 {
+  font-weight: 200;
+
+}
+
+.home Title {
+  
+}
+
+.home img {
+  width: 500px;
+  height: 500px;
+  display: block;
+  margin-left: auto;
+}
+
+.navbar ul{
+  /* text-decoration: none; */
+  width: 300px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar Link {
+  text-decoration: none !important;
+}
+
+
+
+.select-btn {
+  padding: 5px 10px;
+  font-size: 15pt;
+  background-color: rgb(221, 221, 221);
+  /* background-color: transparent; */
+  border-radius: 50px;
+  border: none;
+}
+
+.btn {
+  padding: 5px 10px;
+  font-size: 15pt;
+  /* background-color: rgb(221, 221, 221); */
+  background-color: transparent;
+  border-radius: 50px;
+  border: none;
+}
+
+
+.title Button {
+  margin-top: 50px;
+
+}
+
+.dashboard Profile {
+  margin: 30px;
+}
+
+.dashboard {
+  /* display: flex;
+  justify-content: space-around; */
+  /* margin: ; */
+}
+
+
+.profile {
+  padding: 20px;
+  width: 80%;
+  border: 2px solid rgb(241, 239, 239);
+  height: 500px;
+  margin-left: 65px;
+  /* background-color: rgb(246, 246, 246); */
+  border-radius: 50px;
+}
+
+.profile Card {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.profile img {
+  width: 50px;
+}
+.select-symptoms {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: aqua; */
+}
+
+.input {
+  padding: 10px;
+  border-radius: 50px;
+  width: 90%;
+  /* margin: ; */
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  background-color: rgb(221, 221, 221);
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px 5px rgb(243, 237, 237);
 }
