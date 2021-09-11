@@ -1,5 +1,6 @@
 import './App.css';
 import React from "react";
+import {useState, useEffect} from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +11,7 @@ import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import DocProfile from './components/DocProfile';
 
 function App() {
 
@@ -22,6 +24,16 @@ function App() {
      
   //   }
   // }
+
+  const [patients, setPatients] = useState([])
+
+  useEffect(() => {
+    fetch('/get').then(response => 
+      response.json().then(data => {
+      setPatients(data);
+    })
+    );
+  }, [])
 
   return (
     <Router>

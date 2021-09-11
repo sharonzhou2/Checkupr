@@ -1,9 +1,9 @@
 import React from 'react'
 
-const DocProfile = () => {
+const DocProfile = ({patients}) => {
     return (
         <div>
-            
+            {patients.length}
         </div>
     )
 }
