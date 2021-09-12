@@ -7,7 +7,6 @@ const Patients = ({name, symptom, previous, notes, values, questions}) => {
     const [showInfo, setShowInfo] = useState(false);
     const onPatientClicked = (id) => {
         setShowInfo(!showInfo);
-        console.log("hello");
     } 
     return (
         <div className="patient" onClick={onPatientClicked}>

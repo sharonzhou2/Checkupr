@@ -5,6 +5,7 @@ const PatientCard = ({name, symptom, notes, showInfo, previous, values, question
     return (
         <div className="patient-card">
             <div className="patient-card-div" >
+                
                 <h2>{name}</h2>
                 {values[0].priority > 70 ? 
                     <div className="priority urgent">{values[0].priority}%</div>

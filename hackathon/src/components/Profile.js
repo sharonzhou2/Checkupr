@@ -27,6 +27,7 @@ const Profile = () => {
                 <div> 
                     {/* <div className="profile-child"> */}
                     <div className="profile-symptom">
+                  
                         <h1 className="animate__animated animate__rubberBand">Hello John!</h1>
                         <img src="/images/man.png"></img>
                         <Symptoms></Symptoms>
