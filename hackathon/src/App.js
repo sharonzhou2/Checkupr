@@ -1,5 +1,6 @@
 import './App.css';
 import React from "react";
+import {useState, useEffect} from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,6 +30,16 @@ function App() {
   // .catch(err => {
   //   console.error(err);
   // });
+
+  const [patients, setPatients] = useState([])
+
+  useEffect(() => {
+    fetch('/get').then(response => 
+      response.json().then(data => {
+      setPatients(data);
+    })
+    );
+  }, [])
 
   return (
     <Router>
