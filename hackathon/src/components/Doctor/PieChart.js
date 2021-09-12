@@ -7,8 +7,6 @@ const PieChart = ({values}) => {
     return (
         
         <div>
-            
-        
             <Doughnut
                 data={{labels: label,
                 datasets: [{
