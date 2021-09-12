@@ -11,19 +11,25 @@ import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import DocProfile from './components/DocProfile';
+import DocProfile from './components/Doctor/DocProfile';
+import "animate.css"
 
 function App() {
 
-  // data = {
-  //   patients: {
-  //    id: 1,
-  //    name: "",
-  //   symptoms: "Flu", 
-
-     
+  
+  // fetch("https://endlessmedicalapi1.p.rapidapi.com/GetOutcomes", {
+  //   "method": "GET",
+  //   "headers": {
+  //     "x-rapidapi-host": "endlessmedicalapi1.p.rapidapi.com",
+  //     "x-rapidapi-key": "undefined"
   //   }
-  // }
+  // })
+  // .then(response => {
+  //   console.log(response);
+  // })
+  // .catch(err => {
+  //   console.error(err);
+  // });
 
   const [patients, setPatients] = useState([])
 
@@ -56,6 +62,9 @@ function App() {
           </Route>
           <Route path="/dashboard">
             <Dashboard />
+          </Route>
+          <Route path="/doctor">
+           <DocProfile></DocProfile>
           </Route>
         </Switch>
         <Footer></Footer>
