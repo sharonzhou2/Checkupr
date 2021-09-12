@@ -70,6 +70,19 @@ body {
   cursor: pointer;
 }
 
+.questions-btn {
+  padding: 5px 5px;
+  width: 100%;
+  text-align: left;
+  font-size: 12pt;
+  background-color: rgb(251, 236, 208);
+  color: black;
+  /* border-radius: 25px; */
+  border: none;
+  cursor: pointer;
+  display:block
+}
+
 .btn {
   padding: 10px 20px;
   cursor: pointer;

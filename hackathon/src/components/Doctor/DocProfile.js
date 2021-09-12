@@ -3,43 +3,16 @@ import Patient from './Patient'
 
 const DocProfile = () => {
     const patients = [ 
-        {id: 1, name: "John", symptom: "Flu", previous: [
+        {id: 1, name: "John", symptom: "Chest infection", previous: [
             {
                 id: 1,
                 day: 'Saturday',
-                symptom: 'Flu'
+                symptom: 'Cough'
             },
             {
                 id: 2,
                 day: 'Friday',
-                symptom: 'Flu'
-            },
-            {
-                id: 3,
-                day: 'Thursday',
-                symptom: 'Flu'
-            },
-
-        ], notes: "Seems to be fine the previous days. Check the bloods and temp for any abnormal symptoms",
-            values: [ 
-                {
-                    all: ["Flu", "Cough"], 
-                    data: [5, 7],
-                    priority: 75,
-                    prescription: [2,3,1,4,6,3,5]
-                }
-            ]
-        },
-        {id: 2, name: "Jane", symptom: "Cold" , previous: [
-            {
-                id: 1,
-                day: 'Saturday',
-                symptom: 'Cold'
-            },
-            {
-                id: 2,
-                day: 'Friday',
-                symptom: 'Heavy Breathing'
+                symptom: 'Cough'
             },
             {
                 id: 3,
@@ -47,70 +20,33 @@ const DocProfile = () => {
                 symptom: 'Cough'
             },
 
-        ], notes: "Seems to be fine the previous days. Check the bloods and temp for any abnormal symptoms",
+        ], notes: "Prescribed antibiotics at last appointment for bacterial chest infection. Hasn't been improving, monitor in case further appointment and additional round of antibiotics is required.",
             values: [ 
                 {
-                    all: ["Heavy Breathing", "Cough", "Cold"], 
-                    data: [1,2,3],
-                    priority: 23,
-                    prescription: [12,5,2,75,34,12,4,2]
+                    all: ["Chest pain", "Cough"], 
+                    data: [5, 7],
+                    priority: 75,
+                    prescription: [50, 60, 60, 65, 70, 80, 75]
                 }
-            ]
-        },
-
-        {id: 3, name: "Anna", symptom: "Fracture", previous: [
+            ],
+        questions: [
             {
                 id: 1,
-                day: 'Saturday',
-                symptom: 'Flu'
+                type: 'Yes/No',
+                text: 'Have your symptoms gotten any worse since yesterday?'
             },
             {
                 id: 2,
-                day: 'Friday',
-                symptom: 'Flu'
+                type: 'Yes/No',
+                text: 'Are you experiencing any shortness of breath?'
             },
             {
                 id: 3,
-                day: 'Thursday',
-                symptom: 'Flu'
+                type: 'Yes/No',
+                text: 'Did you take both doses of amoxicillin yesterday?'
             },
-
-        ], notes: "Seems to be fine the previous days. Check the bloods and temp for any abnormal symptoms",
-            values: [ 
-                {
-                    all: ["Heavy Breathing", "Cough", "Cold"], 
-                    data: [5, 7, 9],
-                    priority: 11,
-                    prescription: [1,2,5,12,5,3,23,1]
-                }
-            ]},
-        {id: 4, name: "Peter", symptom: "Flu", previous: [
-            {
-                id: 1,
-                day: 'Saturday',
-                symptom: 'Flu'
-            },
-            {
-                id: 2,
-                day: 'Friday',
-                symptom: 'Flu'
-            },
-            {
-                id: 3,
-                day: 'Thursday',
-                symptom: 'Flu'
-            },
-
-        ], notes: "Seems to be fine the previous days. Check the bloods and temp for any abnormal symptoms",
-            values: [ 
-                {
-                    all: ["Heavy Breathing", "Cough", "Redness"], 
-                    data: [5, 7, 3],
-                    priority: 13,
-                    prescription: [12,3,2,4,2,1,2,4]
-                }
-            ]
-        },
+        ]
+        }
 
     ]
 
@@ -125,7 +61,7 @@ const DocProfile = () => {
                 <h1 >Dr. Smith</h1>
             </div>
        
-            {patients.map((patient) => <Patient name={patient.name} symptom={patient.symptom} previous={patient.previous} notes={patient.notes} values={patient.values} onClick={onPatientClicked}></Patient>)}
+            {patients.map((patient) => <Patient name={patient.name} symptom={patient.symptom} previous={patient.previous} notes={patient.notes} values={patient.values} questions={patient.questions} onClick={onPatientClicked}></Patient>)}
         </div>
     )
 }
