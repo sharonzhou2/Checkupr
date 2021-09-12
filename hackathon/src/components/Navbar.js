@@ -15,9 +15,6 @@ const Navbar = () => {
             <Link to="/" style={{ textDecoration: 'none', color: 'blueviolet'}}><i className="fas fa-heartbeat"></i>  Checkupr</Link>
           </li>
           <li>
-            <Link to="/about" style={{ textDecoration: 'none' , color: 'black' }}>About</Link>
-          </li>
-          <li>
             <Link to="/dashboard" style={{ textDecoration: 'none', color: 'black' }}>Dashboard</Link>
           </li>
           <li>
