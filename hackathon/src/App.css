@@ -72,6 +72,24 @@ body {
   margin-top: 50px;
 }
 
+.questions-btn {
+  padding: 5px 5px;
+  width: 100%;
+  text-align: left;
+  font-size: 12pt;
+  color: black;
+  background-color: transparent;
+  /* border-radius: 25px; */
+  border: none;
+  cursor: pointer;
+  display:block
+}
+
+.questions-btn:hover {
+  border: 2px solid purple;
+  border-radius: 10px;
+}
+
 .btn {
   padding: 10px 20px;
   cursor: pointer;
@@ -231,9 +249,9 @@ body {
 }
 
 .patient p {
-  width: 100px;
+  width: 150px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .patient-card {
