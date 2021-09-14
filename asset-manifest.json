@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/sharonzhou2/Checkupr/static/css/main.2ed46e25.chunk.css",
-    "main.js": "/sharonzhou2/Checkupr/static/js/main.1b84224f.chunk.js",
-    "main.js.map": "/sharonzhou2/Checkupr/static/js/main.1b84224f.chunk.js.map",
-    "runtime-main.js": "/sharonzhou2/Checkupr/static/js/runtime-main.867e709d.js",
-    "runtime-main.js.map": "/sharonzhou2/Checkupr/static/js/runtime-main.867e709d.js.map",
-    "static/css/2.a1596f27.chunk.css": "/sharonzhou2/Checkupr/static/css/2.a1596f27.chunk.css",
-    "static/js/2.cae45adf.chunk.js": "/sharonzhou2/Checkupr/static/js/2.cae45adf.chunk.js",
-    "static/js/2.cae45adf.chunk.js.map": "/sharonzhou2/Checkupr/static/js/2.cae45adf.chunk.js.map",
-    "index.html": "/sharonzhou2/Checkupr/index.html",
-    "static/css/2.a1596f27.chunk.css.map": "/sharonzhou2/Checkupr/static/css/2.a1596f27.chunk.css.map",
-    "static/css/main.2ed46e25.chunk.css.map": "/sharonzhou2/Checkupr/static/css/main.2ed46e25.chunk.css.map",
-    "static/js/2.cae45adf.chunk.js.LICENSE.txt": "/sharonzhou2/Checkupr/static/js/2.cae45adf.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/sharonzhou2/Checkupr/static/media/doc.b3aeb520.png"
+    "main.css": "/Checkupr/static/css/main.38dd5a7d.chunk.css",
+    "main.js": "/Checkupr/static/js/main.2bd0a941.chunk.js",
+    "main.js.map": "/Checkupr/static/js/main.2bd0a941.chunk.js.map",
+    "runtime-main.js": "/Checkupr/static/js/runtime-main.0c83bcc1.js",
+    "runtime-main.js.map": "/Checkupr/static/js/runtime-main.0c83bcc1.js.map",
+    "static/css/2.a1596f27.chunk.css": "/Checkupr/static/css/2.a1596f27.chunk.css",
+    "static/js/2.cae45adf.chunk.js": "/Checkupr/static/js/2.cae45adf.chunk.js",
+    "static/js/2.cae45adf.chunk.js.map": "/Checkupr/static/js/2.cae45adf.chunk.js.map",
+    "index.html": "/Checkupr/index.html",
+    "static/css/2.a1596f27.chunk.css.map": "/Checkupr/static/css/2.a1596f27.chunk.css.map",
+    "static/css/main.38dd5a7d.chunk.css.map": "/Checkupr/static/css/main.38dd5a7d.chunk.css.map",
+    "static/js/2.cae45adf.chunk.js.LICENSE.txt": "/Checkupr/static/js/2.cae45adf.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Checkupr/static/media/doc.b3aeb520.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.867e709d.js",
+    "static/js/runtime-main.0c83bcc1.js",
     "static/css/2.a1596f27.chunk.css",
     "static/js/2.cae45adf.chunk.js",
-    "static/css/main.2ed46e25.chunk.css",
-    "static/js/main.1b84224f.chunk.js"
+    "static/css/main.38dd5a7d.chunk.css",
+    "static/js/main.2bd0a941.chunk.js"
   ]
 }
