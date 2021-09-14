@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="home">
             <Title></Title>
-            <img src="/images/conference.png" alt="Healthcare"></img>
+            <img src={process.env.PUBLIC_URL + '/images/conference.png'}  alt="Healthcare"></img>
         </div>
     )
 }

@@ -29,7 +29,7 @@ const Profile = () => {
                     <div className="profile-symptom">
                   
                         <h1 className="animate__animated animate__rubberBand">Hello John!</h1>
-                        <img src="/images/man.png"></img>
+                        <img src={process.env.PUBLIC_URL + '/images/man.png'}></img>
                         <Symptoms></Symptoms>
                     
                     {/* <div className="profile-icons">
